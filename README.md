@@ -2,7 +2,7 @@
 
 <div style="display: flex; align-items: center;">
     <div style="text-align: center; margin-right: 20px;">
-        <img src="./diagrams/enn-diagram-depicting-AI-ML-and-DL-hierarchy.png" alt="AI Venn Diagram" width="1000">
+        <img src="./diagrams/enn-diagram-depicting-AI-ML-and-DL-hierarchy.png" alt="AI Venn Diagram" width="300">
         <p style="font-size: 10px;"><em>Fig: Venn diagram depicting AI, ML, and DL hierarchy.</em></p>
     </div>
     <div>
