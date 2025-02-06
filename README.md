@@ -6,11 +6,11 @@
         <p style="font-size: 10px;"><em>Fig: Venn diagram depicting AI, ML, and DL hierarchy.</em></p>
     </div>
     <div>
-        - Artificial Intelligence (AI): The field of computer science focused on creating systems that can perform tasks requiring human-like intelligence, such as problem-solving, reasoning, perception, and decision-making.
+        - <strong>Artificial Intelligence (AI):</strong> The field of computer science focused on creating systems that can perform tasks requiring human-like intelligence, such as problem-solving, reasoning, perception, and decision-making.
         <br><br>
-        - Machine Learning (ML): A subset of AI that enables computers to learn from data and improve their performance on a task without being explicitly programmed. It involves algorithms that identify patterns and make predictions or decisions based on input data.  
+        - <strong>Machine Learning (ML):</strong> A subset of AI that enables computers to learn from data and improve their performance on a task without being explicitly programmed. It involves algorithms that identify patterns and make predictions or decisions based on input data.  
         <br><br>
-        - Deep Learning (DL): A subset of ML that uses artificial neural networks with multiple layers to analyze complex patterns in large datasets. It is particularly effective in tasks like image recognition, natural language processing, and speech recognition.
+        - <strong>Deep Learning (DL):</strong> A subset of ML that uses artificial neural networks with multiple layers to analyze complex patterns in large datasets. It is particularly effective in tasks like image recognition, natural language processing, and speech recognition.
     </div>
 </div>
 
