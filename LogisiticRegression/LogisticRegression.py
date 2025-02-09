@@ -6,7 +6,7 @@ import matplotlib
 matplotlib.use("agg")
 
 # Importing the dataset
-iris_dataset = pd.read_csv("iris.csv")
+iris_dataset = pd.read_csv("LogisiticRegression\iris.csv")
 print("Sample of the dataset:")
 print(iris_dataset.head())
 
