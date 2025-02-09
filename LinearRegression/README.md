@@ -16,7 +16,7 @@ Let us consider a dummy dataset of 100 samples with one feature, X and a label y
 | 6.76342256     | 1.08976637     |
 | 9.08712957     | 0.8473096      |
 
-<img src=".\LR_initial-data-points.png" alt="Initial data points visualization" width="500">
+<img src=".\LR_initial-data-points.png" alt="Initial data points visualization" width="700">
 
 Let us define our regression hypothesis as:
 $$
@@ -30,3 +30,44 @@ where,
 <br>
 
 Now, let us initialize the weight and bias with some random value, say $\theta_1$ = 0.40015721, $\theta_0$ = 1.76405235
+
+<br>
+Predicting with the current model gives us the following regression line:
+<img src=".\LR_Initial-Regression-Line.png" alt="Initial regression line" width="700">
+
+## Training the model
+To get reasonable predictions, the model is trained using an algorithm known as **Gradient Descent**.
+<br>
+
+But first, a loss function needs to be selected. In this case, the loss function selected is **Mean Squared Error (MSE)**, which is defined as:
+$$
+MSE = \frac{1}{2m} \sum_{i=1}^m (y_i - \hat{y}_i)^2
+$$
+where, 
+- $\hat{y}_i$ = predicted output for $i^{th}$ example
+- $y_i$ = true label for $i^{th}$ example
+- $m$ = number of training examples
+
+The curve of this loss function as of $\theta_0$ and $\theta_1$ might look like:
+<img src=".\LR_MSE_Parabolic_Curve.png" alt="MSE Curve" width="600">
+
+Now, we implement gradient descent to update the weight and bias in the following manner:
+$$
+\theta_0 := \theta_0 - \alpha \frac{\partial J(\theta)}{\partial \theta_0}
+$$
+
+$$
+\theta_1 := \theta_1 - \alpha \frac{\partial J(\theta)}{\partial \theta_1}
+$$
+where,
+- $\frac{\partial J(\theta)}{\partial \theta_1}$ = Partial derivative of the loss function (MSE) w.r.t. $\theta_1$
+- $\frac{\partial J(\theta)}{\partial \theta_0}$ = Partial derivative of the loss function (MSE) w.r.t. $\theta_0$
+- $\alpha$ = learning rate
+
+Gradient descent is applied for 1000 iterations and the change in loss over each iteration looks like this:
+<img src=".\LR_Cost-Reduction.png" alt="Cost reduction over iterations" width="700">
+
+The final regression line after training the model looks like this:
+<img src=".\LR_Final-Regression-Line.png" alt="Final Regression Line" width="700">
+
+And the final parameters are $\theta_1$ = 2.9685 and $\theta_0$ = 4.222 with a loss of 0.4962

@@ -83,3 +83,29 @@ plt.legend()
 plt.savefig("LR_Final-Regression-Line.png")
 
 print(f"Final Parameters: Intercept = {theta[0][0]:.4f}, Slope = {theta[1][0]:.4f}")
+
+
+############################# VISUALIZING THE CURVE OF MSE #############################
+# Create a grid of theta values
+theta0_vals = np.linspace(theta[0][0] - 5, theta[0][0] + 5, 100)
+theta1_vals = np.linspace(theta[1][0] - 5, theta[1][0] + 5, 100)
+theta0_grid, theta1_grid = np.meshgrid(theta0_vals, theta1_vals)
+
+# Compute the MSE for each combination of theta0 and theta1
+mse_vals = np.zeros_like(theta0_grid)
+for i in range(len(theta0_vals)):
+    for j in range(len(theta1_vals)):
+        theta_temp = np.array([[theta0_vals[i]], [theta1_vals[j]]])
+        mse_vals[i, j] = compute_cost(X_b, y, theta_temp)
+
+# Plot the 3D surface of the MSE
+fig = plt.figure(figsize=(12, 8))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(theta0_grid, theta1_grid, mse_vals, cmap='viridis', alpha=0.8)
+ax.set_xlabel('Theta0 (Intercept)')
+ax.set_ylabel('Theta1 (Slope)')
+ax.set_zlabel('MSE')
+ax.set_title('MSE as a Function of Theta0 and Theta1')
+plt.savefig("LR_MSE_Parabolic_Curve.png")
+
+############################# END OF VISUALIZATION #############################
