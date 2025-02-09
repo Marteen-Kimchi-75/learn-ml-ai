@@ -1,20 +1,19 @@
 ## MNIST CLASSIFICATION USING MULTI-LAYER PERCEPTRON
-# MULTILAYER PERCEPTRON FOR MNIST CLASSIFICATION
 
 This implementation uses PyTorch to build, train, and evaluate a multilayer perceptron (MLP) for classifying handwritten digits from the MNIST dataset.
 
-## TOOLS & LIBRARIES
+### TOOLS & LIBRARIES
 - **Python**
 - **PyTorch** (including `torchvision` for dataset handling)
 - **Matplotlib** for visualization
 - **NumPy**
 
-## DATA PREPARATION
+### DATA PREPARATION
 - **Dataset**: MNIST with 60,000 training and 10,000 test images.
 - **Transformations**: Images are converted to tensors and normalized.
 - **DataLoader**: Used to batch and shuffle the data.
 
-## MODEL ARCHITECTURE
+### MODEL ARCHITECTURE
 - **Input Layer**: 784 neurons (28×28 flattened image).
 - **Hidden Layers**:
   - First hidden layer: 256 neurons with ReLU activation.
@@ -22,24 +21,24 @@ This implementation uses PyTorch to build, train, and evaluate a multilayer perc
 - **Output Layer**: 10 neurons (one for each digit class).
 - **Flattening**: Converts 2D images into 1D vectors before passing to the network.
 
-## TRAINING SETUP
+### TRAINING SETUP
 - **Loss Function**: Cross-Entropy Loss.
 - **Optimizer**: Adam with a learning rate of 0.001.
 - **Batch Size**: 64.
 - **Epochs**: 5.
 - **Device**: GPU if available, otherwise CPU.
 
-## TRAINING PROCESS
+### TRAINING PROCESS
 - **Forward Pass**: Input images are flattened and passed through the network.
 - **Backward Pass**: Loss is computed and gradients are propagated using backpropagation.
 - **Metrics**: Training and test losses and accuracies are recorded each epoch.
 - **Verbose Logging**: Loss values are printed periodically during training.
 
-## VISUALIZATIONS
+### VISUALIZATIONS
 - **Loss & Accuracy Trends**: Plots show how training and test losses, as well as accuracies, change over epochs.
   - ![Loss and Accuracy over Epochs](./training-and-test-accuracy-over-epochs.png)
-- **Sample Predictions**: Displays a set of test images with their predicted and true labels.
+- **Sample Predictions**:
   - ![Sample Predictions](./some-predictions.png)
 
-## MODEL EVALUATION
+### MODEL EVALUATION
 The final training and testing loss comes out to be 0.753 and 0.0879 respectively with a testing accuracy of 97.27%.
