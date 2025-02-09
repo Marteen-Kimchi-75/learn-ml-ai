@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('Agg')
 
-# Generate dummy data
-np.random.seed(42)
-X = 2 * np.random.rand(100, 1)
-y = 4 + 3 * X + np.random.randn(100, 1)  # y = 4 + 3x + noise
+# Generating dummy data
+np.random.seed(0) # Setting a random seed for reproducibility
+X = 2 * np.random.rand(100, 1) # Generate a 100x1 array with elements uniformly distributed in [0, 1) multiplied by 2
+y = 4 + 3 * X + np.random.randn(100, 1)  # Generating the labels with some noise drawn from a standard normal distribution
 
 # Plotting initial data points
 plt.figure(figsize=(10, 5))
