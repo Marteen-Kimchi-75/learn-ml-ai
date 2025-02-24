@@ -42,7 +42,7 @@ Collect data using various sources like databases, APIs or by other means.
 3. **Data Preprocessing** <br>
 - Data cleaning: Handling missing values, removing duplicates, etc.
 - Data transformation: Normalization, standardization, etc.
-- Featur engineering: Creating new features, encoding categorical variables.
+- Feature engineering: Creating new features, encoding categorical variables.
 - Data splitting: Splitting the data into training, validation and testing.
 4. **Exploratory Data Analysis (EDA)** <br>
 Visualize the data using graphs, pie charts, etc.
